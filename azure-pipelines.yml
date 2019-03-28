@@ -33,4 +33,3 @@ jobs:
         package: '$(System.ArtifactsDirectory)/**/*.war'
         runtimeStack: 'TOMCAT|8.5-java11'
         startUpCommand: 'mvn spring-boot:run'
-      enabled: false
