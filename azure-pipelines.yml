@@ -9,7 +9,7 @@ jobs:
     - task: Maven@3
       displayName: 'Maven $(mavenPOMFile)'
       inputs:
-        mavenPomFile: Application/pom.xml
+        mavenPomFile: complete/pom.xml
         testResultsFiles: '**/TEST*.xml'
         mavenAuthenticateFeed: true
     - task: PublishBuildArtifacts@1
