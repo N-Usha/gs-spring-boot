@@ -9,7 +9,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '6454150a-8958-4ec5-b8c1-4d8d68c815f6'
+  azureSubscription: 'RMPM'
   
   # Web app name
   webAppName: 'linuxjseapp'
