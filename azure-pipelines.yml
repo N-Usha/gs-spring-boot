@@ -42,6 +42,13 @@ stages:
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
 
+    - task: AzureRMWebAppDeployment@4
+      displayName: Azure App Service Deploy
+      inputs:
+        azureSubscription: $(azureSubscription)
+        WebAppName: $(webAppName)
+        package: '$(Build.ArtifactStagingDirectory)/drop/**/target/*.?(war|jar)'
+
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
