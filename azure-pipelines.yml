@@ -61,6 +61,7 @@ stages:
             inputs:
               azureSubscription: $(azureSubscription)
               WebAppName: $(webAppName)
+              package: '$(System.ArtifactsDirectory)/drop/**/target/*.?(war|jar)'
           # - task: AzureWebApp@1
           #   displayName: 'Azure Web App Deploy: linuxjseapp'
           #   inputs:
